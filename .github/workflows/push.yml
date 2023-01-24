@@ -35,7 +35,6 @@ jobs:
         yarn install
         npm install -g @devcontainers/cli
         devcontainer build 
+                          --workspace-folder /workspaces/node-bulletin-board
                           --image-name ghcr.io/${GITHUB_REPOSITORY}:latest 
                           --push true
-                          --workspace-folder /workspaces/node-bulletin-board
-                          
