@@ -31,7 +31,9 @@ jobs:
     - 
         name: Pre-build dev container image
         uses: devcontainers/ci@v0.2
+        env:
+          image-name: ${GITHUB_REPOSITORY}
         with:
-          imageName: ghcr.io/${GITHUB_REPOSITORY}:latest
-          cacheFrom: ghcr.io/${GITHUB_REPOSITORY}:latest
+          imageName: ghcr.io/$image-name
+          cacheFrom: ghcr.io/$image-name
           push: always
