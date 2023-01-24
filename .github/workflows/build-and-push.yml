@@ -28,7 +28,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.REGISTRY_TOKEN }}
-    - name: Pre-build dev container image
+    - 
+        name: Pre-build dev container image
         uses: devcontainers/ci@v0.2
         with:
           imageName: ghcr.io/${GITHUB_REPOSITORY}:latest
