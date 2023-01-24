@@ -27,11 +27,9 @@ jobs:
       id: build_and_push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        REGISTRY: ${{ secrets.REGISTRY }}
-        REGISTRY_BASE_PATH: ${{ secrets.REGISTRY_BASE_PATH }}
       run: |
         set -e
         # Build and push images
         yarn install
         npm install -g @devcontainers/cli
-        devcontainer build --workspace-folder /workspaces/node-bulletin-board --image-name ghcr.io/${GITHUB_REPOSITORY}:latest --push true
+        devcontainer build --workspace-folder ./ --image-name ghcr.io/${GITHUB_REPOSITORY}:latest --push true
