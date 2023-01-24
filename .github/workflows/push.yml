@@ -37,5 +37,4 @@ jobs:
         # Build and push images
         yarn install
         npm install -g @devcontainers/cli
-        docker login ghcr.io -u 
         devcontainer build --workspace-folder ./ --image-name ghcr.io/${GITHUB_REPOSITORY}:latest --push true
