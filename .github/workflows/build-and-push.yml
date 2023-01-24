@@ -34,6 +34,6 @@ jobs:
         env:
           image-name: ${GITHUB_REPOSITORY}
         with:
-          imageName: ghcr.io/$image-name
-          cacheFrom: ghcr.io/$image-name
+          imageName: ghcr.io/craiglpeters/node-bulletin-board
+          cacheFrom: ghcr.io/craiglpeters/node-bulletin-board
           push: always
