@@ -38,3 +38,4 @@ jobs:
                           --image-name ghcr.io/${GITHUB_REPOSITORY}:latest 
                           --push true
                           --workspace-folder /workspaces/node-bulletin-board
+                          
